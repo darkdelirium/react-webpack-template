@@ -17,9 +17,9 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: "babel-loader", exclude: [/node_modules/, /dist/] },
+      { test: /\.js$/, loader: "babel-loader", exclude: [/node_modules/, /dist/] },        
       { test: /\.jsx?$/, loader: "babel-loader", exclude: [/node_modules/, /dist/] },
-      { test: /\.css$/, loader: "style-loader!css-loader", exclude: [/node_modules/, /dist/]},
+      { test: /\.css$/, loader: ["style-loader", "css-loader", "less-loader", "sass-loader"]},
       { test: /\.gif$/, loader: "url-loader?limit:10240&mimetype=image/gif" },
       { test: /\.jpg/, loader: "url-loader?limit:10240&mimetype=image/jpg" },
       { test: /\.jpeg$/, loader: "url-loader?limit:10240&mimetype=image/jpg" },
